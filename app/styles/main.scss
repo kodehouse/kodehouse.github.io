@@ -1,0 +1,81 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+@import url(http://fonts.googleapis.com/css?family=Dosis:300,400);
+
+
+.front {
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-image: url('../images/background.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+
+  .logo {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+  }
+
+  .logo > div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.thumbnail {
+  background: #336868;
+  border: 2px solid #fff;
+
+  h3, p {
+    color: #fff;
+  }
+}
+
+.card {
+  font-family: Lato;
+  font-weight: lighter;
+  box-shadow: 10px 0 40px #000;
+  color: #fff;
+
+  .card-title {
+    margin: 15px auto;
+    text-align: center;
+
+    img {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    h1 {
+      font-family: Dosis;
+    }
+  }
+}
+
+.with-line {
+  border-bottom: 1px solid #fff;
+}
+
+.card-1 {
+  background-color: #ff5555;
+}
+
+.card-2 {
+  background-color: #005544
+}
