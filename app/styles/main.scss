@@ -9,7 +9,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 body {
 	font-family: Lato;
-	overflow: none;
+	overflow: hidden;
 }
 
 .page {
@@ -17,17 +17,31 @@ body {
 	height: 100%;
 	position: absolute;
 	margin: 0;
-	padding: 0 80px;
+	padding: 10% 10%;
 	top: 0;
 	left: 0;
 	visibility: hidden;
 	overflow: hidden;
 	backface-visibility: hidden;
 	transform: translate3d(0, 0, 0);
+	display: table;
 }
 
-.page.current { visibility: visible }
+.page > .center {
+	display: table-cell;
+  vertical-align: middle;
+}
+
+.page.current { visibility: visible; overflow-y: scroll; overflow-x: hidden }
 .page.top { z-index:999 }
+
+.page-title {
+	text-align: center;
+
+	.title {
+		color: #fff;
+	}
+}
 
 #home {
 	background-image: url('../images/background.png');
@@ -41,15 +55,35 @@ body {
 			font-weight: bolder;
 			font-size: 5em;
 
-			.color { color: #000 }
+			.black-text { color: #000 }
 		}
 
 		.title-1 { margin-bottom:0 }
 
 		.title-2 {
-			margin-top:-20px;
-			font-size:7em;
+			margin-top: -20px;
+			font-size: 7em;
 		}
+	}
+}
+
+@media(max-width: 680px){
+	#home {
+		.welcome {
+			overflow: hidden;
+			.title {
+				font-size: 2em;
+			}
+
+			.title-2 {
+				margin-top: -10px;
+				font-size: 3em;
+			}
+		}
+	}
+
+	.page {
+		overflow: hidden;
 	}
 }
 
@@ -57,17 +91,9 @@ body {
 #services {
 	width: 100%;
 	background: #55f;
-
-	.title {
-		padding:0 25%;
-		color:#fff;
-		font-size: 6.7em;
-		font-weight: bolder;
-	}
-
 }
 
-#team {
+#team, #team-title {
 	background: #e33;
 
 	> .title {

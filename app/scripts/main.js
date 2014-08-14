@@ -6,7 +6,7 @@
 		totalPages = $pages.length;
 		$window = $(window);
 
-	// $window.on('click', function(){	
+	// $window.on('click', function(){
 	// 	if( cur === totalPages ){
 	// 		$($pages.get(0))
 	// 			.scrollToMe();
@@ -33,14 +33,13 @@ $.fn.scrollToMe = function(coordY){
 		});
 }*/
 $(function(){
-	
 	var pages = $('.page'),
 		length = pages.length - 1,
 		index = 0,
 		currentPage = pages.eq(index),
 		nextPage = getNextPage();
 
-	var outEffect = 
+	var outEffect =
 ['moveToLeft',
 'moveToRight',
 'moveToTop',
@@ -54,7 +53,7 @@ $(function(){
 'moveToTopEasing',
 'moveToBottomEasing'
 ],
-		inEffect = 
+		inEffect =
 ['moveFromLeft',
 'moveFromRight',
 'moveFromTop',
